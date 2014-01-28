@@ -1,0 +1,27 @@
+{
+  "name": "CanteenClientAdmin",
+  "version": "1.0.0",
+  "description": "Boilerplate CSS for Canteen Administration section",
+  "homepage": "http://canteen.github.io/CanteenClientAdmin/",
+  "keywords": [
+    "Canteen",
+    "admin",
+    "css"
+  ],
+  "dependencies" : {
+  	"jquery" : "~1",
+  	"tinymce" : "~4.0",
+  	"CanteenClient" : "*",
+    "components/html5-boilerplate" : "*",
+    "normalize-css" : "*"
+  },
+  "main" : [
+  	"css/admin.css",
+  	"css/fonts.css",
+  	"fonts/admin.eot",
+  	"fonts/admin.svg",
+  	"fonts/admin.ttf",
+  	"fonts/admin.woff",
+  	"js/AdminPage.js"
+  ]
+}

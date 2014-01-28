@@ -1,0 +1,414 @@
+/**
+*  These are initial styles for the Canteen admin pages
+*  feel free to completely discard or modify
+*/
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #ddd inset;
+}
+.pageUpdate label[for="page_content"] {
+	display:none;
+}
+.formContainer {
+	border-radius:10px;
+	border:2px solid #ddd;
+	margin:0 auto 20px;
+}
+.formContainer form{
+	padding:20px;
+	border-radius:10px;
+}
+.loginForm {
+	width:400px;
+}
+.adminNav {
+	width:160px;
+	float:left;
+	margin-bottom:20px;
+	padding-right:20px;
+}
+.adminContent {
+	margin-left:180px;
+}
+
+.adminNav ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+.adminNav ul.custom {
+	border-bottom:2px solid #bbb;
+	margin-bottom:5px;
+	padding-bottom:5px;
+}
+.adminNav a {
+	display:block;
+	padding:5px;
+	border-radius:4px;
+	margin:2px 0;
+	overflow:hidden;
+}
+.adminNav a.selected,
+.no-touch .adminNav a:hover,
+.touch .adminNav a:active {
+	color:#C4CC00;
+}
+.adminNav a span {
+	margin-right:10px;
+}
+.adminHeader {
+	text-align:right;
+	padding:0 10px 10px;
+}
+
+.adminHeader .logout {
+	padding-left:0.5em;
+}
+
+a.adminBack {
+	display:block;
+	margin-bottom:20px;
+	font-size:120%;
+}
+
+.adminContent textarea {
+	min-height:100px;
+}
+
+.adminContent textarea.large {
+	min-height:300px;
+}
+
+.adminContent textarea.tall {
+	height:300px;
+	font-size:14px;
+}
+
+.adminContent textarea.medium {
+	height:140px;
+	font-size:14px;
+}
+
+.adminContent textarea.editable {
+	width:100%;
+}
+
+.mce-tinymce {
+	margin-bottom:5px !important;
+}
+
+.adminContent .datetime-local,
+.adminContent .date,
+.adminContent textarea,
+.adminContent select,
+.adminContent .file,
+.adminContent .password,
+.adminContent .text {
+	color:#666;
+	font-size:100%;
+	padding:7px;
+	border:1px solid #ccc;
+	/*border-top-width:2px;*/
+	width:70%;
+	margin-bottom:5px;
+	background-color:#eee;
+	border-radius:5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance:none;
+	appearance:none;
+}
+
+.adminContent select {
+	background-image:url(../images/arrow.png);
+	background-repeat:no-repeat;
+	background-position:center right;
+}
+
+.selectForm fieldset {
+	position:relative;
+}
+
+.selectForm .formRow {
+	position: absolute;
+	left: 0;
+	right: 105px;
+	width: auto;
+}
+
+.selectForm select {
+	width:100%;
+}
+
+.selectForm .submit {
+	float: right;
+	padding: 6px 20px 6px 10px;
+}
+
+.adminContent .button,
+.adminContent .submit, 
+.adminContent .clear {
+	font-size:110%;
+	padding:8px 30px 8px 20px;
+	cursor:pointer;
+	background-color:#C4CC02;
+	color:#fff !important;
+	border:0;
+	border-bottom-width:2px;
+	text-decoration:none;
+	margin:0 2px;
+	border-radius:5px;
+}
+
+.adminContent .button.small,
+.submit.small,
+.clear.small{
+	font-size:100%;
+	padding:6px 20px;
+}
+
+.touch .adminContent .button:active,
+.touch .adminContent .submit:active,
+.touch .adminContent .clear:active,
+.no-touch .adminContent .button:hover,
+.no-touch .adminContent .submit:hover,
+.no-touch .adminContent .clear:hover{
+	background-color:#CE3E67;
+	transition: background-color 0.2s;
+	-webkit-transition: background-color 0.2s;
+}
+
+button span.buttonLabel {
+	padding-left:4px;
+}
+button span.buttonIcon {
+	font-size:120%;
+	vertical-align:text-bottom;
+}
+.touch .adminContent .datetime-local:active,
+.touch .adminContent .date:active,
+.touch .adminContent textarea:active,
+.touch .adminContent select:active,
+.touch .adminContent .password:active,
+.touch .adminContent .text:active,
+.touch .adminContent .select:active,
+.touch .adminContent .file:active,
+.no-touch .adminContent .datetime-local:hover,
+.no-touch .adminContent .date:hover,
+.no-touch .adminContent textarea:hover,
+.no-touch .adminContent select:hover,
+.no-touch .adminContent .password:hover,
+.no-touch .adminContent .text:hover,
+.no-touch .adminContent .select:hover,
+.no-touch .adminContent .file:hover,
+.adminContent button.over,
+.adminContent input.over {
+	background-color:#ddd;
+	border-color:#aaa;
+	color:#666;
+	transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+	-webkit-transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+.adminContent input.error {
+	color:#fff;
+	background-color:rgb(233, 77, 77)  !important;
+}
+.adminContent .disabled {
+	color:#666 !important;
+	background-color:#999 !important;
+	border-color:#777 !important;
+	cursor:default;
+}
+.adminContent .formNotice {
+	padding:10px;
+	border:1px solid #EC7C01;
+	margin-bottom:20px;
+	border-radius:5px;
+	color:#EC7C01;
+}
+.adminContent .optional {
+	background-color:#eee;
+}
+.adminContent legend {
+	margin-bottom:20px;
+	text-align:center;
+	font-size:120%;
+}
+.formRow {
+	min-height:35px;
+}
+.formRow label {
+	float:left;
+	display:block;
+	width:30%;
+	padding-top:6px;
+	color:#bbb;
+	font-size:16px;
+}
+.forgotError,
+.forgotSuccess,
+.tempPassword {
+	text-align:center;
+}
+.tempPassword {
+	font-size:140%;
+	font-weight:bold;
+}
+.forgotError {
+	color:#c00;
+	font-weight:bold;
+}
+.forgotError,
+.forgotSuccess {
+	padding-top:20px;
+}
+.loginForm .forgot {
+	padding-top:10px;
+}
+.loginForm .forgot,
+.loginForm .remember {
+	text-align:center;
+	font-size:90%;
+}
+
+.formRow {
+	margin-bottom:5px;
+}
+
+ul.formError,
+ul.formError a {
+    color:#c00 !important;
+}
+ul.formError a,
+ul.formSuccess a {
+	font-weight:bold;
+}
+ul.formSuccess,
+ul.formSuccess a {
+    color:#06c !important;
+}
+ul.formError,
+ul.formSuccess {
+	padding: 0 0 0 20px;
+	margin:0 0 20px;
+	line-height:120%;
+	list-style:disc;
+}
+.configUpdate form:not(:first-child){
+	border:0;
+}
+.configUpdate .submit .buttonLabel {
+	display:none;
+}
+.configUpdate ul.formError, 
+.configUpdate ul.formSuccess {
+	margin-bottom:10px;
+}
+.configUpdate form {
+	padding:0 10px 10px;
+	margin:0;
+}
+.configUpdate .formRow {
+	margin-bottom:0;
+}
+.configUpdate label,
+.configUpdate select,
+.configUpdate .text,
+.configUpdate .submit,
+.configUpdate .button {
+	float:left;
+	margin:0 !important;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.configUpdate select,
+.configUpdate .checkbox,
+.configUpdate .text{
+	width:46%;
+	font-size:100%;
+	overflow:hidden;
+}
+.configUpdate .checkbox {
+	margin:10px 0;
+	float:left;
+}
+.configUpdate label {
+	width:30%;
+}
+.configUpdate .submit,
+.configUpdate .button {
+	width:11%;
+	padding:8px 0 !important;
+	margin:0 0 0 1% !important;
+	font-size:100% !important;
+}
+
+/** For 0px - 599px */
+@media all and (max-width : 599px) {
+	.adminNav,
+	.adminContent  {
+		float:none;
+		position:static;
+		width:100%;
+		margin-left:0;
+	}
+	.adminNav ul {
+		line-height:1;
+	}
+	.adminNav ul li {
+		display:inline-block;
+		width:50%;
+	}
+	.adminHeader {
+		float:none;
+		margin:0;
+		text-align:center;
+	}
+	.adminNav a {
+		text-align:center;
+		margin:0 2px;
+	}
+	.formContainer form {
+		padding:20px;
+	}
+	
+	.configUpdate form {
+		padding:5px 10px;
+	}
+	
+	.formRow label {
+		font-size:14px;
+		float:none;
+		width:auto;
+		margin-bottom:5px;
+	}
+	
+	.configUpdate .formRow label {
+		width:30%;
+		float:left;
+		font-size:12px;
+	}
+	
+	.configUpdate select,
+	.configUpdate .checkbox,
+	.configUpdate .text {
+		font-size:12px;
+	}
+	
+	.loginForm {
+		width:auto;
+	}
+
+	.adminContent .file,
+	.adminContent .datetime-local,
+	.adminContent .date,
+	.adminContent textarea,
+	.adminContent select,
+	.adminContent .password,
+	.adminContent .text {
+		float:none;
+		width:100%;
+	}
+}
