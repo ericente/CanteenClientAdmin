@@ -1,5 +1,5 @@
 {
-    "name": "CanteenClientAdmin",
+    "name": "CanteenAdmin",
     "version": "1.0.0",
     "description": "Boilerplate CSS for Canteen Administration section",
     "homepage": "http://canteen.github.io/CanteenClientAdmin/",
@@ -11,7 +11,7 @@
     "dependencies" : {
         "jquery" : "~1",
         "tinymce" : "~4.0",
-        "Canteen/CanteenClient" : "*",
+        "Canteen" : "*",
         "html5-boilerplate" : "~4.3",
         "normalize-css" : "*"
     },
