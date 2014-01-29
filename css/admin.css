@@ -46,20 +46,12 @@ input:-webkit-autofill {
 .adminContent h1 span{
 	margin-right:10px;
 }
-
-.adminContent a,
-.admin nav a,
-.admin header a {
+.admin a {
 	text-decoration: none;
 	color:#396EA0;
 }
-
-.no-touch .adminContent a:hover,
-.no-touch .admin nav a:hover,
-.no-touch .admin header a:hover,
-.touch .adminContent a:active,
-.touch .admin nav a:active,
-.touch .admin header a:active {
+.no-touch .admin a:hover,
+.touch .admin a:active {
 	color:#CE3E67;
 }
 
@@ -102,21 +94,21 @@ a.adminBack {
 	min-height:100px;
 }
 
-.adminContent textarea.large {
+.admin textarea.large {
 	min-height:300px;
 }
 
-.adminContent textarea.tall {
+.admin textarea.tall {
 	height:300px;
 	font-size:14px;
 }
 
-.adminContent textarea.medium {
+.admin textarea.medium {
 	height:140px;
 	font-size:14px;
 }
 
-.adminContent textarea.editable {
+.admin textarea.editable {
 	width:100%;
 }
 
@@ -124,18 +116,17 @@ a.adminBack {
 	margin-bottom:5px !important;
 }
 
-.adminContent .datetime-local,
-.adminContent .date,
-.adminContent textarea,
-.adminContent select,
-.adminContent .file,
-.adminContent .password,
-.adminContent .text {
+.admin .datetime-local,
+.admin .date,
+.admin textarea,
+.admin select,
+.admin .file,
+.admin .password,
+.admin .text {
 	color:#666;
 	font-size:100%;
 	padding:7px;
 	border:1px solid #ccc;
-	/*border-top-width:2px;*/
 	width:70%;
 	margin-bottom:5px;
 	background-color:#eee;
@@ -146,17 +137,18 @@ a.adminBack {
 	-webkit-appearance: none;
 	-moz-appearance:none;
 	appearance:none;
+	outline:0;
 }
 
-.adminContent select {
+.admin select {
 	background-image:url(../images/arrow.png);
 	background-repeat:no-repeat;
 	background-position:center right;
 }
 
-.adminContent .button,
-.adminContent .submit, 
-.adminContent .clear {
+.admin .button,
+.admin .submit, 
+.admin .clear {
 	font-size:110%;
 	padding:8px 30px 8px 20px;
 	cursor:pointer;
@@ -167,21 +159,28 @@ a.adminBack {
 	text-decoration:none;
 	margin:0 2px;
 	border-radius:5px;
+	outline:0;
 }
 
-.adminContent .button.small,
+.admin .button:focus,
+.admin .submit:focus, 
+.admin .clear:focus {
+	background-color:#61A6E7;
+}
+
+.admin .button.small,
 .submit.small,
 .clear.small{
 	font-size:100%;
 	padding:6px 20px;
 }
 
-.touch .adminContent .button:active,
-.touch .adminContent .submit:active,
-.touch .adminContent .clear:active,
-.no-touch .adminContent .button:hover,
-.no-touch .adminContent .submit:hover,
-.no-touch .adminContent .clear:hover{
+.touch .admin .button:active,
+.touch .admin .submit:active,
+.touch .admin .clear:active,
+.no-touch .admin .button:hover,
+.no-touch .admin .submit:hover,
+.no-touch .admin .clear:hover{
 	background-color:#CE3E67;
 	transition: background-color 0.2s;
 	-webkit-transition: background-color 0.2s;
@@ -194,51 +193,63 @@ button span.buttonIcon {
 	font-size:120%;
 	vertical-align:text-bottom;
 }
-.touch .adminContent .datetime-local:active,
-.touch .adminContent .date:active,
-.touch .adminContent textarea:active,
-.touch .adminContent select:active,
-.touch .adminContent .password:active,
-.touch .adminContent .text:active,
-.touch .adminContent .select:active,
-.touch .adminContent .file:active,
-.no-touch .adminContent .datetime-local:hover,
-.no-touch .adminContent .date:hover,
-.no-touch .adminContent textarea:hover,
-.no-touch .adminContent select:hover,
-.no-touch .adminContent .password:hover,
-.no-touch .adminContent .text:hover,
-.no-touch .adminContent .select:hover,
-.no-touch .adminContent .file:hover,
-.adminContent button.over,
-.adminContent input.over {
+.touch .admin .datetime-local:active,
+.touch .admin .date:active,
+.touch .admin textarea:active,
+.touch .admin select:active,
+.touch .admin .password:active,
+.touch .admin .text:active,
+.touch .admin .select:active,
+.touch .admin .file:active,
+.no-touch .admin .datetime-local:hover,
+.no-touch .admin .date:hover,
+.no-touch .admin textarea:hover,
+.no-touch .admin select:hover,
+.no-touch .admin .password:hover,
+.no-touch .admin .text:hover,
+.no-touch .admin .select:hover,
+.no-touch .admin .file:hover,
+.admin button.over,
+.admin input.over {
 	background-color:#ddd;
 	border-color:#aaa;
 	color:#666;
 	transition: background-color 0.4s, color 0.4s, border-color 0.4s;
 	-webkit-transition: background-color 0.4s, color 0.4s, border-color 0.4s;
 }
-.adminContent input.error {
+
+.admin .datetime-local:focus,
+.admin .date:focus,
+.admin textarea:focus,
+.admin select:focus,
+.admin .password:focus,
+.admin .text:focus,
+.admin .select:focus,
+.admin .file:focus {
+	background: #E7F1F8;
+	border-color: #A2B5C2;
+}
+.admin input.error {
 	color:#fff;
 	background-color:rgb(233, 77, 77)  !important;
 }
-.adminContent .disabled {
+.admin .disabled {
 	color:#666 !important;
 	background-color:#999 !important;
 	border-color:#777 !important;
 	cursor:default;
 }
-.adminContent .formNotice {
+.admin .formNotice {
 	padding:10px;
 	border:1px solid #EC7C01;
 	margin-bottom:20px;
 	border-radius:5px;
 	color:#EC7C01;
 }
-.adminContent .optional {
+.admin .optional {
 	background-color:#eee;
 }
-.adminContent legend {
+.admin legend {
 	margin-bottom:20px;
 	text-align:center;
 	font-size:120%;
@@ -407,13 +418,13 @@ ul.formSuccess {
 		padding:20px;
 	}
 
-	.adminContent .file,
-	.adminContent .datetime-local,
-	.adminContent .date,
-	.adminContent textarea,
-	.adminContent select,
-	.adminContent .password,
-	.adminContent .text {
+	.admin .file,
+	.admin .datetime-local,
+	.admin .date,
+	.admin textarea,
+	.admin select,
+	.admin .password,
+	.admin .text {
 		float:none;
 		width:100%;
 	}

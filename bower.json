@@ -23,7 +23,7 @@
         "fonts/admin.svg",
         "fonts/admin.ttf",
         "fonts/admin.woff",
-        "js/AdminPage.js",
+        "js/admin.js",
         "images/arrow.png"
     ],
     "ignore": [

@@ -131,3 +131,11 @@
 	namespace("Canteen.Pages").AdminPage = AdminPage;
 	
 }());
+
+$(function(){
+	var site = Canteen.Site.instance,
+		AdminPage = Canteen.Pages.AdminPage;
+
+	site.addPage('admin/pages', new AdminPage("#page_title", "#page_uri"));
+});
+
