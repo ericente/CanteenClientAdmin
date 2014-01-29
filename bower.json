@@ -10,7 +10,7 @@
     "dependencies" : {
         "jquery" : "~1",
         "tinymce" : "http://download.moxiecode.com/tinymce/tinymce_4.0.12_jquery.zip",
-        "canteen" : "master",
+        "canteen" : "*",
         "normalize-css" : "*",
         "modernizr" : "*"
     },
