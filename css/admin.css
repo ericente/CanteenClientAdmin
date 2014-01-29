@@ -1,17 +1,26 @@
-/**
-*  These are initial styles for the Canteen admin pages
-*  feel free to completely discard or modify
-*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
+.admin {
+	font-family:'Open Sans', sans-serif;
+	font-weight:400;
+	border:2px solid #ddd;
+	border-radius:10px;
+	background-color:#fff;
+	max-width:800px;
+	margin:0 auto;
+	padding:20px;
+}
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px #ddd inset;
-}
-.pageUpdate label[for="page_content"] {
-	display:none;
 }
 .formContainer {
 	border-radius:10px;
 	border:2px solid #ddd;
 	margin:0 auto 20px;
+}
+.formButtons {
+	padding:10px 10px 0;
+	text-align:center;
 }
 .formContainer form{
 	padding:20px;
@@ -20,7 +29,7 @@ input:-webkit-autofill {
 .loginForm {
 	width:400px;
 }
-.adminNav {
+.admin nav {
 	width:160px;
 	float:left;
 	margin-bottom:20px;
@@ -29,38 +38,57 @@ input:-webkit-autofill {
 .adminContent {
 	margin-left:180px;
 }
+.adminContent h1 {
+	font-family:'Open Sans', sans-serif;
+	font-weight:300;
+	margin-top:0;
+}
+.adminContent h1 span{
+	margin-right:10px;
+}
 
-.adminNav ul {
+.adminContent a,
+.admin nav a,
+.admin header a {
+	text-decoration: none;
+	color:#396EA0;
+}
+
+.no-touch .adminContent a:hover,
+.no-touch .admin nav a:hover,
+.no-touch .admin header a:hover,
+.touch .adminContent a:active,
+.touch .admin nav a:active,
+.touch .admin header a:active {
+	color:#CE3E67;
+}
+
+.admin nav ul {
 	list-style:none;
 	padding:0;
 	margin:0;
 }
-.adminNav ul.custom {
+.admin nav ul.custom {
 	border-bottom:2px solid #bbb;
 	margin-bottom:5px;
 	padding-bottom:5px;
 }
-.adminNav a {
+.admin nav a {
 	display:block;
 	padding:5px;
 	border-radius:4px;
 	margin:2px 0;
 	overflow:hidden;
 }
-.adminNav a.selected,
-.no-touch .adminNav a:hover,
-.touch .adminNav a:active {
-	color:#C4CC00;
-}
-.adminNav a span {
+.admin nav a span {
 	margin-right:10px;
 }
-.adminHeader {
+.admin header {
 	text-align:right;
 	padding:0 10px 10px;
 }
 
-.adminHeader .logout {
+.admin header .logout {
 	padding-left:0.5em;
 }
 
@@ -126,33 +154,13 @@ a.adminBack {
 	background-position:center right;
 }
 
-.selectForm fieldset {
-	position:relative;
-}
-
-.selectForm .formRow {
-	position: absolute;
-	left: 0;
-	right: 105px;
-	width: auto;
-}
-
-.selectForm select {
-	width:100%;
-}
-
-.selectForm .submit {
-	float: right;
-	padding: 6px 20px 6px 10px;
-}
-
 .adminContent .button,
 .adminContent .submit, 
 .adminContent .clear {
 	font-size:110%;
 	padding:8px 30px 8px 20px;
 	cursor:pointer;
-	background-color:#C4CC02;
+	background-color:#396EA0;
 	color:#fff !important;
 	border:0;
 	border-bottom-width:2px;
@@ -318,7 +326,7 @@ ul.formSuccess {
 .configUpdate .submit,
 .configUpdate .button {
 	float:left;
-	margin:0 !important;
+	margin:0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -344,61 +352,59 @@ ul.formSuccess {
 	margin:0 0 0 1% !important;
 	font-size:100% !important;
 }
+.pageUpdate label[for="page_content"] {
+	display:none;
+}
+.selectForm fieldset {
+	position:relative;
+}
+.selectForm .formRow {
+	position: absolute;
+	left: 0;
+	right: 105px;
+	width: auto;
+}
+.selectForm select {
+	width:100%;
+}
+
+.selectForm .submit {
+	float: right;
+	padding: 6px 20px 6px 10px;
+}
 
 /** For 0px - 599px */
 @media all and (max-width : 599px) {
-	.adminNav,
+	.admin {
+		border:0;
+		padding:15px;
+	}
+
+	.admin nav,
 	.adminContent  {
 		float:none;
 		position:static;
 		width:100%;
 		margin-left:0;
 	}
-	.adminNav ul {
+	.admin nav ul {
 		line-height:1;
 	}
-	.adminNav ul li {
+	.admin nav ul li {
 		display:inline-block;
 		width:50%;
 	}
-	.adminHeader {
+	.admin header {
 		float:none;
 		margin:0;
 		text-align:center;
 	}
-	.adminNav a {
+	.admin nav a {
 		text-align:center;
 		margin:0 2px;
 	}
 	.formContainer form {
 		padding:20px;
-	}
-	
-	.configUpdate form {
-		padding:5px 10px;
-	}
-	
-	.formRow label {
-		font-size:14px;
-		float:none;
-		width:auto;
-		margin-bottom:5px;
-	}
-	
-	.configUpdate .formRow label {
-		width:30%;
-		float:left;
-		font-size:12px;
-	}
-	
-	.configUpdate select,
-	.configUpdate .checkbox,
-	.configUpdate .text {
-		font-size:12px;
-	}
-	
-	.loginForm {
-		width:auto;
 	}
 
 	.adminContent .file,
@@ -411,4 +417,32 @@ ul.formSuccess {
 		float:none;
 		width:100%;
 	}
+	
+	.formRow label {
+		font-size:14px;
+		float:none;
+		width:auto;
+		margin-bottom:5px;
+	}
+
+	.configUpdate form {
+		padding:5px 10px;
+	}
+
+	.configUpdate label {
+		width:100%;
+		float:none;
+		display:block;
+	}
+
+	.configUpdate .checkbox,
+	.configUpdate select,
+	.configUpdate .text {
+		width:75%;
+		float:left;
+	}
+	
+	.loginForm {
+		width:auto;
+	}	
 }

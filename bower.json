@@ -10,10 +10,11 @@
     ],
     "dependencies" : {
         "jquery" : "~1",
-        "tinymce" : "~4.0",
+        "http://download.moxiecode.com/tinymce/tinymce_4.0.12_jquery.zip" : "4.0.12",
         "Canteen" : "*",
         "html5-boilerplate" : "~4.3",
-        "normalize-css" : "*"
+        "normalize-css" : "*",
+        "modernizr" : "*"
     },
     "main" : [
         "css/admin.css",
@@ -22,7 +23,8 @@
         "fonts/admin.svg",
         "fonts/admin.ttf",
         "fonts/admin.woff",
-        "js/AdminPage.js"
+        "js/AdminPage.js",
+        "images/arrow.png"
     ],
     "ignore": [
         ".gitignore",
