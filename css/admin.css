@@ -1,7 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
-
 .admin {
-	font-family:'Open Sans', sans-serif;
+	font-family:Helvetica, sans-serif;
 	font-weight:400;
 	border:2px solid #ddd;
 	border-radius:10px;
@@ -39,7 +37,7 @@ input:-webkit-autofill {
 	margin-left:180px;
 }
 .adminContent h1 {
-	font-family:'Open Sans', sans-serif;
+	font-family:Helvetica, sans-serif;
 	font-weight:300;
 	margin-top:0;
 }
