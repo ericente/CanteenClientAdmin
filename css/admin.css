@@ -224,9 +224,10 @@ button span.buttonIcon {
 .admin .text:focus,
 .admin .select:focus,
 .admin .file:focus {
-	background: #E7F1F8;
+	background-color: #E7F1F8;
 	border-color: #A2B5C2;
 }
+.admin textarea.error,
 .admin input.error {
 	color:#fff;
 	background-color:rgb(233, 77, 77)  !important;
