@@ -114,6 +114,7 @@ a.adminBack {
 	margin-bottom:5px !important;
 }
 
+.admin .number,
 .admin .datetime-local,
 .admin .date,
 .admin textarea,
