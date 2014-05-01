@@ -229,6 +229,7 @@ button span.buttonIcon {
 	background-color: #E7F1F8;
 	border-color: #A2B5C2;
 }
+.admin select.error,
 .admin textarea.error,
 .admin input.error {
 	color:#fff;
