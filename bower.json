@@ -9,7 +9,7 @@
     ],
     "dependencies" : {
         "jquery" : "~1",
-        "tinymce" : "http://download.moxiecode.com/tinymce/tinymce_4.0.12_jquery.zip",
+        "tinymce" : "~4",
         "canteen" : "*",
         "normalize-css" : "*",
         "modernizr" : "*"
